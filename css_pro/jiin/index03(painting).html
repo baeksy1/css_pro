@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index03.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="index03.js"></script>
+</head>
+<body>
+ 
+        <div class="buttons"><button class="dark">DARK</button></div>
+        <header>
+          <div class="menu">
+            <ul class="top_left">
+              <li><a href="#">EXHIBIRIONS</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul>
+            <ul class="top_right">
+              <li><a href="#">MYPAGE</a></li>
+              <li><a href="#">LOGOUT</a></li>
+              <li class="temp">     </li>
+            </ul>
+          </div>
+          
+           <div class="logo">
+            <a href="#">
+              <img src="img/title.png" alt="logo">
+            </a>
+          </div> 
+          
+        </header>
+
+
+
+    <section>
+        <div class="section_title">
+            <h2 class="tit">PAINTING</h2>    
+        </div>
+        <div class="btn">
+            <button id="btn1" class="photo" onclick="photoPage()">PHOTO</button>
+            <button id="btn2" class="painting" style="color: #4295F5; font-weight:600;" onclick="paintingPage()">PAINTING</button>
+        </div>
+        <div class="searchBox">
+            <label><input type="text" id="search" onkeyup="filter()" placeholder="제목 or 작가를 입력하세요"></label>
+        </div>
+        <div class="box2">
+            <ul class="post_list">
+
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA1.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+            
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 앙리 마티스</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA3.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+              
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 앤디워홀</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA5.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 지안보지아</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA2.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 앙리 마티스</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA4.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 앤디워홀</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/PA6.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 지안보지아</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/37.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/38.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/39.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/40.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/41.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="p_flex">
+                    <div class="thum">
+                        <a><img src="img/42.jpg" alt="#"></a>
+                    </div>
+                    <div class="content">
+                        <h3>뜨거운 여름이었다.</h3>
+                        <p class="date">2023.07.05
+                            <span>by 장지인</span>
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="page">
+                <button id="btn1" class="pre" onclick="nopre()">PREV</button>
+                <button id="btn2" class="next" onclick="next()">NEXT</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
