@@ -400,6 +400,7 @@ html, body, .stage, .ring, .img {
         width: 400px;
         float: right;
         margin-top: 150px;
+        margin-right: 30px;
         text-align: right;
     }
     .na .title p{
@@ -450,7 +451,7 @@ html, body, .stage, .ring, .img {
         margin-top: 10px;
     }
     .down{
-        margin-top: 30px;
+        margin-top: 89px;
         text-align: center;
     }
     .down p{
