@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index02.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/index02.js"></script>
+    <style>
+        .hz {
+            display: inline-block;
+        }
+
+
+
+        .hz a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="buttons"><button class="dark">DARK</button></div>
+    <header>
+      <div class="menu">
+        <ul class="top_left">
+          <li><a href="#">EXHIBIRIONS</a></li>
+          <li><a href="../GalleriaGallery_YJ/about.html">ABOUT</a></li>
+        </ul>
+        <ul class="top_right">
+          <li><a href="#">MYPAGE</a></li>
+          <li><a href="#">LOGOUT</a></li>
+          <li class="temp">     </li>
+        </ul>
+      </div>
+      
+       <div class="logo">
+        <a href="#">
+          <img src="img/title.png" alt="logo">
+        </a>
+      </div> 
+      
+    </header>
+    <section>
+        <div class="section_title">
+            <h2 class="tit">PHOTO</h2>
+        </div>
+        <div class="btn">
+            <button id="btn1" class="photo" style="color: #4295F5; font-weight:600;"
+                onclick="photoPage()">PHOTO</button>
+            <button id="btn2" class="painting" onclick="paintingPage()">PAINTING</button>
+        </div>
+        <div class="box2">
+            <ul class="post_list">
+
+              
+            </ul>
+        </div>
+        <div style="text-align: center; margin-top: 100px;">
+            <div class="hz">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+
+            var pageNum = 1;
+            var btn = document.querySelector('.hz');
+            var ul = document.querySelector(".post_list");
+
+
+
+
+
+            console.log(ul);
+            btn.onclick = function () {
+                
+                if (event.target.tagName != 'A') {
+                    return;
+                }
+                event.preventDefault();
+               
+                pageNum++;
+                ajax(pageNum);
+
+            }
+            //js는 함수로 묶어두는 편이 좋음
+            function ajax(page) {
+
+                //1일때 1~10,2일때 11~20,3일때21~30
+                var end = (page * 10) + 2;
+                var start = end - 11;
+                var new1="";
+
+                fetch("js/seoul.js").then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    var data = data.DATA;
+                    for (var i = start; i <= end; i++) {
+                        var li = document.createElement("li");
+                        li.classList.add("p_flex");
+                        var thum = document.createElement("div");
+                        thum.classList.add("thum");
+                        var atag = document.createElement("a");
+                        var newimg = document.createElement("img");
+                        var newul = document.createElement("ul");
+                        newimg.src = data[i].dp_main_img;
+
+                        atag.appendChild(newimg);
+                        thum.appendChild(atag);
+                        li.appendChild(thum);
+                        newul.appendChild(li);
+                        new1+=newul.innerHTML;
+                        console.log(new1)
+                    }
+                    ul.innerHTML=new1;
+                })
+            }
+
+
+
+            //최초 한번 실행
+            (function () {
+                ajax(pageNum);
+            })();
+
+        </script>
+</body>
+
+</html>

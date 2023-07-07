@@ -57,7 +57,6 @@ a {
   
   .temp {width: 50px;}
   
-  
   .buttons button{
     cursor: pointer; 
     border-radius: 55px; 
@@ -73,7 +72,8 @@ a {
     right: 5%;
   }
   
-  .buttons button{
+  /* dark mode */
+  .buttons .dark{
     overflow: hidden; position: relative; 
     display: inline-block; vertical-align: top; 
     width: 50px; height: 50px; 
@@ -82,14 +82,29 @@ a {
     transition: all 0.5s;
     color: rgb(0, 0, 0);
   }
-  .buttons button:hover{color: #fefefe !important; font-weight: 900 !important;}
-  .buttons button:before{content: ""; z-index: -1; 
+  .buttons .dark:hover{color: #fefefe !important; font-weight: 900 !important;}
+  .buttons .dark:before{content: ""; z-index: -1; 
     position: absolute; background: hsl(0, 2%, 11%); transition: all 1s;}
   .buttons .dark:before{left: 0; bottom: 0; width: 100%; height: 0; border-top-left-radius: 50%; border-top-right-radius: 50%;}
   .buttons .dark:hover:before{height: 200%;}
-  
-  
-  
+
+  /* bright mode */
+  .buttons .bright{
+    overflow: hidden; position: relative; 
+    display: inline-block; vertical-align: top; 
+    width: 50px; height: 50px; 
+    line-height: 20px; 
+    border: 1px solid #ffffff; 
+    transition: all 0.5s;
+    color: rgb(24, 24, 24);
+    font-size: small;
+  }
+  .buttons .bright:hover{background-color: rgb(224, 224, 224) !important; font-weight: 800 !important;}
+  .buttons .bright:before{ content: ""; z-index: -1; 
+    position: absolute; background: hsl(0, 2%, 11%); transition: all 1s;}
+  .buttons .bright:before{left: 0; bottom: 0; width: 100%; height: 0; border-top-left-radius: 50%; border-top-right-radius: 50%;}
+  .buttons .bright:hover:before{height: 200%;}    
+
   .logo {
     width: 80%;
     margin-left: 10%;
@@ -123,7 +138,7 @@ a {
 .title {
     text-align: center;
     width: 100%;
-    background-image: url(/GalleriaGallery_YJ/img/07-1.jpg);
+    background-image: url(/GalleriaGallery/img/07-1.jpg);
     background-repeat: no-repeat;
     
 }
@@ -283,13 +298,10 @@ section{
 
     float: left;
     width: 400px;
-    padding: 5px;
+    padding: 8px;
     margin-top: 5px;
-    
 
 }
-
-
 
 .history_img2 > img {
     width: 500px;
@@ -360,13 +372,11 @@ section{
     padding: 10px;
 }
 
-
 .history_img4 {
 
     width: 1500px;
     margin-top: -290px;
 }
-
 
 .history_img4 .year {
     
@@ -378,7 +388,6 @@ section{
     text-align: right;   
     
 }
-
 
 .history_img4 .history_d3 {
 
@@ -398,7 +407,25 @@ section{
     text-align: right;
 }
 
+#scroll_B_up {
 
+    width: 50px;
+    position: fixed;
+    z-index: 2;
+    top: 92%;
+    left: 95%;
+    
+}
+
+#scroll_B_down {
+
+    width: 50px;
+    position: fixed;
+    z-index: 2;
+    top: 92%;
+    left: 95%;
+    
+}
 
 
 
