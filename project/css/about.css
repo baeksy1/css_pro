@@ -1,0 +1,418 @@
+*{padding: 0; margin: 0;}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 50;
+    font-style: normal;
+}
+
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: 'Playfair Display', serif;
+    /* font-size: 14px; */
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+ /* 헤더 */
+/* header */
+
+a {
+    text-decoration: none;
+    font-family: 'Gilda Display', serif;
+    
+  }
+  
+  .menu {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding-top: 25px;
+  }
+  
+  li{
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .top_left {
+    float: left;
+  }
+  
+  .top_right {
+    float: right;
+  }
+  
+  a {
+    color: black;
+    font-size: 20px;
+  }
+  
+  .temp {width: 50px;}
+  
+  
+  .buttons button{
+    cursor: pointer; 
+    border-radius: 55px; 
+    background: 0 none; border: 0 none; margin: 0; 
+    font-size: 14px; 
+    font-family: 'Gilda Display', serif;
+  }
+  
+  .buttons{
+    position: absolute;
+    text-align: center; 
+    margin-top: 10px;
+    right: 5%;
+  }
+  
+  .buttons button{
+    overflow: hidden; position: relative; 
+    display: inline-block; vertical-align: top; 
+    width: 50px; height: 50px; 
+    line-height: 20px; 
+    border: 1px solid #090909; 
+    transition: all 0.5s;
+    color: rgb(0, 0, 0);
+  }
+  .buttons button:hover{color: #fefefe !important; font-weight: 900 !important;}
+  .buttons button:before{content: ""; z-index: -1; 
+    position: absolute; background: hsl(0, 2%, 11%); transition: all 1s;}
+  .buttons .dark:before{left: 0; bottom: 0; width: 100%; height: 0; border-top-left-radius: 50%; border-top-right-radius: 50%;}
+  .buttons .dark:hover:before{height: 200%;}
+  
+  
+  
+  .logo {
+    width: 80%;
+    
+    position: absolute;
+    top: 10px;
+  }
+  
+  .logo a img {
+    width: 30%;
+    left: 48%;
+  }
+  
+  header {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  
+  header {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+.title {
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/07-1.jpeg);
+    background-repeat: no-repeat;
+    
+}
+.box {
+    margin-top: 50px;
+    text-align: center;
+}
+.title > h2 {
+    padding: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    line-height: 200px;
+    color: white;
+    height: 200px;
+    letter-spacing: 5px;
+    
+}
+
+.small_title{ height: 50px; width: 1000px; box-sizing: border-box; margin: 0 auto;}
+.small_title > h4{
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pretendard-Regular';
+    text-align: center;
+    line-height: 50px;    
+
+}
+
+.description{width: 1000px; margin: 0 auto; box-sizing: border-box;}
+.description > p {
+    
+    font-family: 'Pretendard-Regular';
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.box2 {
+
+    width: 1000px;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+
+swiper-container {
+    width: 1000px;
+    height: 500px;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+
+swiper-slide img {
+    padding: 10px;
+    display: block;
+    width: 200px;
+    height: 300;
+    object-fit: cover;
+}
+.mySwiper {
+
+    height: auto;
+    margin-top: 50px;
+}
+.sns_icon {
+
+    width: 350px;   
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 750px;
+    margin-top: 10px;
+    
+}
+
+.sns_icon .icon {
+
+    width: 42px;    
+    float: left;
+    margin: 0px 5px;
+    display: block;
+    box-sizing: border-box;
+    
+    
+}
+
+.sns_icon .icon:hover {
+
+    border: 3px solid rgb(114, 165, 169);
+    border-radius: 100%;
+}
+
+section{
+
+    width: 1000px;
+    margin-left: 125px;
+
+}
+
+.history {
+
+    margin-top: 50px;
+    width: 500px;
+    border-left: 2px solid rgb(228, 223, 223);
+    margin-left: 80px;
+}
+
+.history > h2 {
+
+    font-size: 40px;
+    color: red;
+    font-weight: 300px;
+    padding: 10px;
+    letter-spacing: 2px;
+    
+
+}
+
+.history > p {
+
+    color: black;
+    font-size: 10px;
+    padding: 10px;
+    margin-top: -20px;
+
+}
+
+.history_img1 {
+
+    margin-top: 10px;
+    margin-left: 25px;
+    overflow: hidden;
+   
+}
+
+
+.history_img1 > img {
+
+    width: 400px;
+}
+
+.history_img1 .history_description{
+
+    float: left;
+    width: 400px;
+    padding: 5px;
+    margin-top: 5px;
+    
+
+}
+
+
+
+.history_img2 > img {
+    width: 500px;
+    margin-left: 1000px;
+    margin-top: 50px;
+}
+
+.history_img2{
+
+    position: relative;
+    display: inline-block;
+    left: 100px;
+}
+
+.history_img2 > span {
+
+    color: red;
+    font-weight: 100px;
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    letter-spacing: -18px;
+    position: absolute;
+    top: 50px;
+    right: 480px;
+}
+
+.history_img2 .history_d{
+    margin-right: 60px;
+    overflow: hidden;
+} 
+
+.history_img2 .history_d .right{
+
+    float: right;
+    width: 200px;
+    padding:10px
+
+}
+
+.history_img3 .year {
+
+    color: red;
+    font-weight: 100px;
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    letter-spacing: -18px;
+    margin-top: -260px;
+
+}
+
+.history_img3 > img{
+
+    width: 500px;
+}
+
+.history_img3 .history_d2 {
+   
+    padding: 5px;
+    width: 550px;
+    overflow: hidden;
+}
+
+.history_img3 .history_d2 .left{
+
+    float: left;
+    width: 250px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+.history_img4 {
+
+    width: 1500px;
+    margin-top: -290px;
+}
+
+
+.history_img4 .year {
+    
+    color: red;
+    font-weight: 100px;
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    letter-spacing: -18px;
+    text-align: right;   
+    
+}
+
+
+.history_img4 .history_d3 {
+
+    overflow: hidden;
+}
+
+.history_img4 .history_d3 .right{
+
+    float: right;
+    width: 400px;
+    /* margin-left: 1000px; */
+    padding: 10px;
+}
+
+.history_d3 > p {
+
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

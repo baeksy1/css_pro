@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/all.css">
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+    </style>
+
+
+</head>
+
+<body>
+
+    
+    <div class="main">
+        <div class="buttons">
+            <button type="button" class="skip" onclick="location.href='login.html'">SKIP</button>
+
+        </div>
+        
+        <video data-keepplaying autoplay muted loop playsinline>
+            <source src="video/blue.mp4" type="video/mp4">
+        </video> 
+        
+        <div class="animated-title">
+            <div class="parent"></div>
+
+            <div class="buttons2">
+                
+
+            </div>
+
+        </div>
+        
+
+    </div>
+
+
+    <script>
+        var parent = document.querySelector('.parent');
+        var buttons2 = document.querySelector('.buttons2');
+
+        setTimeout(function () {
+            
+            var h2 = document.createElement('h2');
+            h2.classList.add('child');
+            h2.classList.add('text1');
+            h2.innerHTML = "WELCOME!";
+
+            parent.appendChild(h2);
+
+        }, 5000);
+
+        setTimeout(function () {
+            
+            var h2 = document.createElement('h2');
+            h2.classList.add('child');
+            h2.classList.add('text2');
+            h2.innerHTML = "ENJOY YOUR STAY with";
+
+            parent.appendChild(h2);
+
+        }, 7000);
+
+        setTimeout(function () {
+            
+            var h2 = document.createElement('h2');
+            h2.classList.add('child');
+            h2.classList.add('text3');
+            h2.innerHTML = "GALLERIAGALLARY";
+
+            parent.appendChild(h2);
+
+        }, 9000);
+
+        setTimeout(function () {
+            
+            var btn = document.createElement('button');
+            btn.classList.add('go');
+            btn.innerHTML = "GO IN";
+            buttons2.appendChild(btn);
+
+        }, 11000);
+
+        buttons2.addEventListener('click', function(){
+            location.href = 'login.html';
+        })
+
+    </script>
+
+</body>
+
+</html>

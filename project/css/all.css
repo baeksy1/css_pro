@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, li, ol, dd, dl {
+    list-style: none;
+}
+
+
+body, html {
+    font-family: 'SUITE-Regular', sans-serif;
+    font-family: 'Gilda Display', serif;
+}
+
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
