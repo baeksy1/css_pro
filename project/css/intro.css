@@ -1,0 +1,107 @@
+a {
+    text-decoration: none;
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main > video {
+    z-index: -1;
+}
+
+
+.buttons button{
+    cursor: pointer; 
+    border-radius: 55px; 
+    font-family: 'Exo 2', sans-serif; 
+    background: 0 none; border: 0 none; margin: 0; 
+    font-size: 18px; font-style: italic;
+}
+
+.buttons{
+    position: absolute; z-index: 1; 
+    text-align: center; 
+    margin-top: 25px;
+    right: 30px;
+}
+.buttons button{
+    overflow: hidden; position: relative; 
+    display: inline-block; vertical-align: top; 
+    width: 80px; height: 80px; 
+    line-height: 40px; 
+    border: 2px solid #ffffff; 
+    transition: all 0.5s;
+    color: white;
+}
+.buttons button:hover{color: #2863f9 !important; font-weight: 900 !important;}
+.buttons button:before{content: ""; z-index: -1; 
+    position: absolute; background: hsl(0, 0%, 100%); transition: all 1s;}
+.buttons .skip:before{left: 0; top: 0; width: 100%; height: 0; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;}
+.buttons .skip:hover:before{height: 200%;}
+
+
+.parent {
+    height: 3em; /* 애니메이션 높이 */
+    overflow-y: hidden;
+    display: block;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+.parent .child {
+    font-size: 3em;/* 애니메이션 높이 */
+    font-weight: bold;
+    line-height: 1;
+    animation-name: grow;
+    animation-duration: 1.5s;/* 애니메이션 시간 */
+    top : 100px;
+    font-family: 'Caveat', cursive;
+    color: white;
+}
+
+.parent .text1 {}
+.parent .text2 {margin-top: 10px;}
+.parent .text3 {margin-top: 20px; font-size: 100px;}
+
+/* 키프레임 애니메이션 */
+@keyframes grow {
+    from { transform: translateY(3em) }/* 애니메이션 높이 */
+    to { transform: translateY(0) }
+}
+
+
+.buttons2 button{
+    cursor: pointer; 
+    border-radius: 55px; 
+    font-family: 'Exo 2', sans-serif; 
+    background: 0 none; border: 0 none; margin: 0; 
+    font-size: 18px; font-style: italic;
+    
+}
+
+.buttons2{
+    position: absolute; z-index: 2; 
+    text-align: center; 
+    margin-top: 25px;
+    top: 430px;
+    left: 48%;;
+}
+.buttons2 button{
+    overflow: hidden; position: relative; 
+    display: inline-block; vertical-align: top; 
+    width: 80px; height: 80px; 
+    line-height: 40px; 
+    border: 2px solid #ffffff; 
+    transition: all 0.5s;
+    color: white;
+}
+.buttons2 button:hover{color: #2863f9 !important; font-weight: 900 !important;}
+.buttons2 button:before{content: ""; z-index: -1; 
+    position: absolute; background: hsl(0, 0%, 100%); transition: all 1s;}
+.buttons2 .go:before{left: 0; top: 0; width: 100%; height: 0; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;}
+.buttons2 .go:hover:before{height: 200%;}

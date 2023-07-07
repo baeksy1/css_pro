@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/kakao.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="./style.css">
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
+</head>
+<body>
+    
+    <!--  data-img='{"1": "img/log1.jpeg", "2":"img/log2.jpeg", "3": "img/log3.jpeg", "4": "img/log4.jpeg", "5": "log5.jpeg", "6": "log6.jpeg"}' -->
+    
+    <div class="box">
+        <div class="left">
+            <img src="img/log1.jpeg" class="bgImg" alt="image">
+        </div>
+        
+        
+
+        <div class="right">
+            <div class="section">
+                <div class="container">
+                    <div class="row full-height justify-content-center">
+                        <div class="col-12 text-center align-self-center py-5">
+                            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                                <img src="img/title.png" alt="" width="400px" style="margin-bottom: 50px;">
+                                <h6 class="mb-0 pb-3"><span>LOG IN </span><span>SIGN UP</span></h6>
+                                  <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                                  <label for="reg-log"></label>
+                                <div class="card-3d-wrap mx-auto">
+                                    <div class="card-3d-wrapper">
+                                        <div class="card-front">
+                                            <div class="center-wrap">
+                                                <div class="section text-center">
+                                                    <h4 class="mb-4 pb-3">LOG IN</h4>
+                                                    <div class="form-group">
+                                                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                                        <i class="input-icon uil uil-at"></i>
+                                                    </div>	
+                                                    <div class="form-group mt-2">
+                                                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                    <a href="#"  class="btn mt-4" style="margin-top: 0px !important;">SUBMIT</a>
+                                                    <div class="login_etc" style="margin-top: 20px;">
+                                                        <div id="naver_id_login" class="left_login"></div>
+                                                        <div class="right_login">
+                                                            <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                                                                <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="170"
+                                                                 alt="카카오 로그인 버튼" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        <div class="card-back">
+                                            <div class="center-wrap">
+                                                <div class="section text-center">
+                                                    <h4 class="mb-4 pb-3">SIGN UP</h4>
+                                                    <div class="form-group">
+                                                        <input type="text" name="logname" class="form-style name" placeholder="Your Name" id="logname2" autocomplete="off">
+                                                        <i class="input-icon uil uil-user"></i>
+                                                    </div>	
+                                                    <div class="form-group mt-2">
+                                                        <input type="email" name="logemail" class="form-style email" placeholder="Your Email" id="logemail2" autocomplete="off">
+                                                        <i class="input-icon uil uil-at"></i>
+                                                    </div>	
+                                                    <div class="form-group mt-2">
+                                                        <input type="password" name="logpass" class="form-style pw" placeholder="Your Password" id="logpass2" autocomplete="off" onkeypress="enterFunc()">
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                    <a href="#" onclick="joinCheck()" class="btn mt-4" style="margin-top: 0px !important;">SUBMIT</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

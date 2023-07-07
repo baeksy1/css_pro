@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/exinfo.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <div><img src="img/title.png" class="title"></div>
+    <div class="buttons"><button class="dark">close</button></div>
+    <script>
+        var btn = document.querySelector(".dark");
+        btn.onclick = function() {
+            window.close();
+        }
+    </script>
+
+
+    <div class="container">
+        <div class="con_left">
+
+            <h3>알폰스무하: 더 골든 에이지</h3>
+
+            <div class="con">
+                <p class="txt1">전시 장소: 롯데백화점 명동(9F)</p>
+                <p class="txt2">전시 기간: 23.06.30(금) ~ 23.08.31(목)</p>
+                <p class="txt3">관람 시간: 11:00 ~ 20:00(매표소 마감 19시 / 롯데백화점 정기 휴점일 연동)</p>
+            </div>
+
+            <div id="map" style="width:550px;height:350px;"></div>
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec2772c2357a378d12c19e18240c29e9"></script>
+
+            <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.565058795842, 126.98191823341222), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                var imageSrc = 'img/marker2.png', // 마커이미지의 주소입니다    
+                    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+                    imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+                // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                    markerPosition = new kakao.maps.LatLng(37.565058795842, 126.98191823341222); // 마커가 표시될 위치입니다
+
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition,
+                    image: markerImage // 마커이미지 설정 
+                });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
+
+            </script>
+        </div>
+        <div class="con_right">
+
+            <img src="img/mucha.jpeg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
