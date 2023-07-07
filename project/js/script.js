@@ -60,3 +60,53 @@ function dragEnd(e){
 function getBgPos(i){ //returns the background-position string to create parallax movement in each image
   return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0px';
 }
+
+
+var ring=document.querySelector(".ring");
+var hover10=document.querySelector(".hover10");
+var img1=document.querySelector(".choice");
+ring.onclick=function(){
+    if(event.target.className!='img'){
+        return
+    }
+    console.log(event.target.style.backgroundImage)
+    // hover10.
+    var domain=event.target.style.backgroundImage;
+    img1.style.backgroundImage=domain;
+    hover10.classList.remove("hidden");
+    console.log( img1.style.backgroundImage)
+   
+    return;
+
+}
+img1.onclick=function(){
+
+    hover10.classList.add("hidden");
+
+}
+
+function goToScroll(name){
+    var loc = document.querySelector("." + name).offsetTop + 800;
+    window.scrollTo({top: loc, behavior: 'smooth'});
+  }
+
+
+var cli=document.querySelector(".down");
+
+cli.onclick=function(){
+    var foot=document.querySelectorAll(".hid");
+    for(var i=0; i<foot.length;i++){
+
+        foot[i].classList.remove("hid");
+    }
+}
+
+
+// ring.onmouseout=function(){
+//     if(event.target.className!='img'){
+//         return
+//     }
+//     // event.target.removeChild(p);
+//     event.target.firstChild.remove();
+// }
+
