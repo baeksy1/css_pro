@@ -38,3 +38,27 @@ function filter(){
         }
     }
 }
+
+
+function search() {
+    var input = document.getElementById('search');
+    var filter = input.value.toUpperCase();
+    var ul = document.getElementsByClassName('post_list')[0];
+    var li = ul.getElementsByTagName('li');
+  
+    for (var i = 0; i < li.length; i++) {
+      var title = li[i].getElementsByClassName('co_title')[0];
+      var artist = li[i].getElementsByClassName('co_name')[0];
+      var txtValueTitle = title.textContent || title.innerText;
+      var txtValueArtist = artist.textContent || artist.innerText;
+      var matchTitle = txtValueTitle.toUpperCase().indexOf(filter) > -1;
+      var matchArtist = txtValueArtist.toUpperCase().indexOf(filter) > -1;
+  
+      if (matchTitle || matchArtist) {
+        li[i].style.display = '';
+      } else {
+        li[i].style.display = 'none';
+      }
+    }
+  }
+  

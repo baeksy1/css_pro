@@ -19,7 +19,7 @@
 
 <body>
 
-    <div class="buttons"><button class="dark">DARK</button></div>
+    <div class="buttons"><button class="dark" id="tog">DARK</button></div>
   <header>
     <div class="menu">
       <ul class="top_left">
@@ -27,14 +27,14 @@
         <li><a href="about.html">ABOUT</a></li>
       </ul>
       <ul class="top_right">
-        <li><a href="#">EXHIBITIONS</a></li>
+        <li><a href="api.html">EXHIBITIONS</a></li>
         <li><a href="intro.html">LOGOUT</a></li>
         <li class="temp">     </li>
       </ul>
     </div>
     
     <div class="logo">
-      <a href="#">
+      <a href="main.html">
         <img src="img/title.png" class="logo">
       </a>
     </div>
@@ -219,11 +219,59 @@
     </section>
 
 
+    <div class="name">
     <img id="scroll_B_up" class="bright" src="img/scroll_up_bright.png" alt="" onclick="scrollUpB()" >
-    <img id="scroll_B_down" class="bright" src="img/scroll_down_bright.png" alt="" onclick="scrollDownB()">
+    <img id="scroll_B_down" class="bright" src="img/scroll_down_bright.png" alt="" onclick="scrollDownB('name')">
+    </div>
+    <script src="js/about.js"></script>
+   
 
 
 
+      <!-- footer -->
+<div class="foo_info">
+
+    <div class="company">
+      <div class="foo_text">
+        <br>
+      (주)갤러리아갤러리<br>
+      서울특별시 강남구 테헤란로 7길 7(역삼동)<br>
+      사업자등록번호.261_11_123456<br>
+      대표자. 김현진
+    </div>
+    </div>
+  
+    <div class="cs">
+      <div class="foo_text">
+      <br>
+      <br>
+      Customer Center.<br>
+      T. 1577 - 1234 (09:00 - 18:00 / 점심시간 13:00 - 14:00)<br>
+      E. genie85@gallgall.com
+    </div>
+    </div>
+  
+    <div class="our">
+      <div class="foo_text">
+      <br>
+      <br>
+      <br>
+      2023 by GALLERIAGALLARY ALL RIGHTS RESERVED.<br>
+      DESIGNED by HYEON/YONG/JUNG/JIIN
+    </div>
+    </div>
+  </div>
+    
+  
+  </body>
+  
+  </html>
+
+
+  <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "ko", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    
 </body>
 
 </html>
