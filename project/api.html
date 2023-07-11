@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="css/index02.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/index02.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
+
     <style>
         .hz {
             display: inline-block;
         }
 
+        .section_title > .tit {
+            font-family: 'Gilda Display', serif;
+            margin-bottom: 30px;
+        }
 
 
         .hz a {
@@ -22,44 +31,46 @@
             text-decoration: none;
         }
     </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
 </head>
 
 <body>
 
     <div class="buttons"><button class="dark">DARK</button></div>
     <header>
-      <div class="menu">
-        <ul class="top_left">
-          <li><a href="#">EXHIBIRIONS</a></li>
-          <li><a href="../GalleriaGallery_YJ/about.html">ABOUT</a></li>
-        </ul>
-        <ul class="top_right">
-          <li><a href="#">MYPAGE</a></li>
-          <li><a href="#">LOGOUT</a></li>
-          <li class="temp">     </li>
-        </ul>
-      </div>
-      
-       <div class="logo">
-        <a href="#">
-          <img src="img/title.png" alt="logo">
-        </a>
-      </div> 
-      
+        <div class="menu">
+            <ul class="top_left">
+                <li><a href="index02(photo).html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <ul class="top_right">
+                <li><a href="api.html">EXHIBITIONS</a></li>
+                <li><a href="intro.html">LOGOUT</a></li>
+                <li class="temp"> </li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="main.html">
+                <img src="img/title.png" class="logo">
+            </a>
+        </div>
+
     </header>
+
+
     <section>
         <div class="section_title">
-            <h2 class="tit">PHOTO</h2>
+            <p class="tit">EXHIBIRIONS </p>
         </div>
-        <div class="btn">
-            <button id="btn1" class="photo" style="color: #4295F5; font-weight:600;"
-                onclick="photoPage()">PHOTO</button>
-            <button id="btn2" class="painting" onclick="paintingPage()">PAINTING</button>
-        </div>
+
         <div class="box2">
             <ul class="post_list">
 
-              
+
             </ul>
         </div>
         <div style="text-align: center; margin-top: 100px;">
@@ -75,9 +86,6 @@
         </div>
 
 
-
-
-
         <script>
 
             var pageNum = 1;
@@ -88,14 +96,13 @@
 
 
 
-            console.log(ul);
             btn.onclick = function () {
-                
+
                 if (event.target.tagName != 'A') {
                     return;
                 }
                 event.preventDefault();
-               
+
                 pageNum++;
                 ajax(pageNum);
 
@@ -106,7 +113,7 @@
                 //1일때 1~10,2일때 11~20,3일때21~30
                 var end = (page * 10) + 2;
                 var start = end - 11;
-                var new1="";
+                var new1 = "";
 
                 fetch("js/seoul.js").then(function (response) {
                     return response.json();
@@ -117,23 +124,45 @@
                         li.classList.add("p_flex");
                         var thum = document.createElement("div");
                         thum.classList.add("thum");
+                        thum.style.width = "350px";
                         var atag = document.createElement("a");
                         var newimg = document.createElement("img");
                         var newul = document.createElement("ul");
+                        var p = document.createElement("p");
+                        var p1 = document.createElement("p");
+                        p.style.fontSize = "18px";
+                        p1.style.fontSize = "16px";
+                        p1.style.color = "#999";
+                        p.style.paddingTop = "10px"
+                        p.style.fontWeight = "1000";
+                        p1.style.fontWeight = "8000";
+                        p.style.height = "55px";
+
+                        p.innerHTML = data[i].dp_name;
+
+
+                        if (data[i].dp_name == "김윤신: 더하고 나누며, 하나") {
+
+                            newimg.classList.add("newimg");
+                            atag.href = "#";
+                            // atag.onclick = "window.open('exInfo3.html', '전시정보', 'width = 1400px, height = 700px, left = 50px, top = 150px')";
+
+                        }
+                        p1.innerHTML = "개관일: " + data[i].dp_start;
                         newimg.src = data[i].dp_main_img;
 
                         atag.appendChild(newimg);
+                        atag.appendChild(p);
+                        atag.appendChild(p1);
                         thum.appendChild(atag);
                         li.appendChild(thum);
                         newul.appendChild(li);
-                        new1+=newul.innerHTML;
-                        console.log(new1)
+                        new1 += newul.innerHTML;
                     }
-                    ul.innerHTML=new1;
+
+                    ul.innerHTML = new1;
                 })
             }
-
-
 
             //최초 한번 실행
             (function () {
@@ -141,6 +170,21 @@
             })();
 
         </script>
+
+        <script>
+            var postList = document.querySelector(".post_list");
+
+            postList.onclick = function () {
+                if(event.target.classList.contains("newimg")){
+                window.open('exInfo3.html', '전시정보', 'width = 1400px, height = 700px, left = 50px, top = 100px')
+                }
+            }
+
+        </script>
+
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = { "default_language": "ko", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>

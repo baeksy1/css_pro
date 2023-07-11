@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index03.css">
+    <link rel="stylesheet" href="css/index02_1.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/index03.js"></script>
-    <style>
+<style>
         @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
     </style>
+
 </head>
 <body>
  
@@ -21,7 +22,7 @@
           <li><a href="about.html">ABOUT</a></li>
         </ul>
         <ul class="top_right">
-          <li><a href="#">EXHIBITIONS</a></li>
+          <li><a href="api.html">EXHIBITIONS</a></li>
           <li><a href="intro.html">LOGOUT</a></li>
           <li class="temp">     </li>
         </ul>
@@ -46,7 +47,8 @@
             <button id="btn2" class="painting" style="color: #4295F5; font-weight:600;" onclick="paintingPage()">PAINTING</button>
         </div>
         <div class="searchBox">
-            <label><input type="text" id="search" onkeyup="filter()" placeholder="제목 or 작가를 입력하세요"></label>
+            <input type="text" id="search" placeholder="제목 or 작가를 입력하세요">
+            <button id="searchBtn" onclick="search()">검색</button>
         </div>
         <div class="box2">
             <ul class="post_list">
@@ -57,9 +59,9 @@
                     </div>
                     <div class="content">
             
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 앙리 마티스</span>
+                            <span class="co_name">by 앙리 마티스</span>
                         </p>
                     </div>
                 </li>
@@ -69,9 +71,9 @@
                     </div>
                     <div class="content">
               
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 앤디워홀</span>
+                            <span class="co_name">by 앤디워홀</span>
                         </p>
                     </div>
                 </li>
@@ -80,9 +82,9 @@
                         <a><img src="jiin_img/PA5.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 지안보지아</span>
+                            <span class="co_name">by 지안보지아</span>
                         </p>
                     </div>
                 </li>
@@ -91,9 +93,9 @@
                         <a><img src="jiin_img/PA2.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 앙리 마티스</span>
+                            <span class="co_name">by 앙리 마티스</span>
                         </p>
                     </div>
                 </li>
@@ -102,9 +104,9 @@
                         <a><img src="jiin_img/PA4.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 앤디워홀</span>
+                            <span class="co_name">by 앤디워홀</span>
                         </p>
                     </div>
                 </li>
@@ -113,9 +115,9 @@
                         <a><img src="jiin_img/PA6.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 지안보지아</span>
+                            <span class="co_name">by 지안보지아</span>
                         </p>
                     </div>
                 </li>
@@ -124,9 +126,9 @@
                         <a><img src="jiin_img/37.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -135,9 +137,9 @@
                         <a><img src="jiin_img/38.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -146,9 +148,9 @@
                         <a><img src="jiin_img/39.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -157,9 +159,9 @@
                         <a><img src="jiin_img/40.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -168,9 +170,9 @@
                         <a><img src="jiin_img/41.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -179,9 +181,9 @@
                         <a><img src="jiin_img/42.jpg" alt="#"></a>
                     </div>
                     <div class="content">
-                        <h3>뜨거운 여름이었다.</h3>
+                        <h3 class="co_title">뜨거운 여름이었다.</h3>
                         <p class="date">2023.07.05
-                            <span>by 장지인</span>
+                            <span class="co_name">by 장지인</span>
                         </p>
                     </div>
                 </li>
@@ -193,5 +195,38 @@
             </div>
         </div>
     </section>
+     <!-- footer -->
+<div class="foo_info">
+
+    <div class="company">
+      <div class="foo_text">
+        <br>
+      (주)갤러리아갤러리<br>
+      서울특별시 강남구 테헤란로 7길 7(역삼동)<br>
+      사업자등록번호.261_11_123456<br>
+      대표자. 김현진
+    </div>
+    </div>
+  
+    <div class="cs">
+      <div class="foo_text">
+      <br>
+      <br>
+      Customer Center.<br>
+      T. 1577 - 1234 (09:00 - 18:00 / 점심시간 13:00 - 14:00)<br>
+      E. genie85@gallgall.com
+    </div>
+    </div>
+  
+    <div class="our">
+      <div class="foo_text">
+      <br>
+      <br>
+      <br>
+      2023 by GALLERIAGALLARY ALL RIGHTS RESERVED.<br>
+      DESIGNED by HYEON/YONG/JUNG/JIIN
+    </div>
+    </div>
+  </div>
 </body>
 </html>

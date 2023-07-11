@@ -7,37 +7,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
 
 </head>
 
 <body>
     <!-- partial:index.partial.html -->
 
+    <div class="gtranslate_wrapper"></div>
+    <div class="buttons"><button class="dark">DARK</button></div>
+    <header>
+        <div class="menu">
+            <ul class="top_left">
+                <li><a href="index02(photo).html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <ul class="top_right">
+                <li><a href="api.html">EXHIBITIONS</a></li>
+                <li><a href="intro.html">LOGOUT</a></li>
+                <li class="temp"> </li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="main.html">
+                <img src="img/title.png" class="logo">
+            </a>
+        </div>
+
+    </header>
+
     <body class="im">
-        <div class="gtranslate_wrapper"></div>
-        <div class="buttons"><button class="dark">DARK</button></div>
-        <header>
-            <div class="menu">
-                <ul class="top_left">
-                    <li><a href="index02(photo).html">EXHIBIRIONS</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-                <ul class="top_right">
-                    <li><a href="#">MYPAGE</a></li>
-                    <li><a href="#">LOGOUT</a></li>
-                    <li class="temp"> </li>
-                </ul>
-            </div>
-
-            <div class="logo">
-                <a href="#">
-                    <img src="img/title.png" alt="logo">
-                </a>
-            </div>
-
-        </header>
         <section class="title">
-            <h2>승용백's GALLERY</h2>
+            <h2>YOSIGO's GALLERY</h2>
         </section>
 
 
@@ -61,46 +65,95 @@
                     <div>
                         <div class="choice"></div>
 
-                        <p>작품에 대한 설명</p>
+                        <p class="tit">작품에 대한 설명</p>
+                        <p class="con">
+                            " 빛과 빛을 다루는 방식에서 영감을 얻습니다 <br>
+                            좋은 빛은 항상 큰 영감을 가져와요. <br>
+                            온종일 지루하게만 보였던 건물도 어느 순간 <br>
+                            좋은 빛을 만나면 마법과 같은 결과를 만들어냅니다."<br>
+                        </p>
+
                     </div>
                 </figure>
             </div>
         </div>
         <div class="down">
-            <p onclick="goToScroll('down')">작가 정보</p>
+            <p>작가 정보</p>
+            <img src="img/down.png" onclick="goToScroll('down')" alt="">
+
         </div>
 
         <section class="foot fade">
             <div class="na">
-            <img src="img/yoshigo.jpg" class="hid fadeImg">
-            <div class="hid title" >
-            <p>호세 하비에르 세라노 에체베리아 </p>
-             <p> (Jose Javier Serrano Echeverria)</p>
-            
-            </div>
-        </div>     
-             <div class="hid box fadeBox">
-                    <br>
-                    <br>
-                    <p>2009년 미국의 Wired 12월 호 표지와 2010년 Colors 봄 호 표지를 장식하며 이름을 알리기 시작했다.</p>
-                    <p>저서로는 Greetings From (2017), Mapa de Memoria (2015), Riu Avall (2014), Kresela(2009) 등이</p>
-                        <p> 있으며 Últims
-                        Anys(2013), Azken Urteak(2012) 등</p>
-                    <p>다수의 개인전과 그룹전에 참가하였다. 국내에서는 2010 전주국제사진제에 참여한 이력이 있다.</p>
+                <img src="img/yoshigo.jpg" class="hid fadeImg">
+                <div class="hid title">
+                    <p>호세 하비에르 세라노 에체베리아 </p>
+                    <p> (Jose Javier Serrano Echeverria)</p>
+
                 </div>
+            </div>
+            <div class="hid box fadeBox">
+                <br>
+                <br>
+                <p>2009년 미국의 Wired 12월 호 표지와 2010년 Colors 봄 호 표지를 장식하며 이름을 알리기 시작했다.</p>
+                <p>저서로는 Greetings From (2017), Mapa de Memoria (2015), Riu Avall (2014), Kresela(2009) 등이</p>
+                <p> 있으며 Últims
+                    Anys(2013), Azken Urteak(2012) 등</p>
+                <p>다수의 개인전과 그룹전에 참가하였다. 국내에서는 2010 전주국제사진제에 참여한 이력이 있다.</p>
+            </div>
         </section>
     </body>
 
 
-    <script>gtranslateSettings = { "default_language": "ko", "detect_browser_language": true, "languages": ["ko", "fr", "de", "it", "es", "en"], "wrapper_selector": ".gtranslate_wrapper", "switcher_horizontal_position": "right" }</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
-
-
+    
+    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    
+    <!-- footer -->
+    <div class="foo_info">
+
+        <div class="company">
+            <div class="foo_text">
+                <br>
+                (주)갤러리아갤러리<br>
+                서울특별시 강남구 테헤란로 7길 7(역삼동)<br>
+                사업자등록번호.261_11_123456<br>
+                대표자. 김현진
+            </div>
+        </div>
+
+        <div class="cs">
+            <div class="foo_text">
+                <br>
+                <br>
+                Customer Center.<br>
+                T. 1577 - 1234 (09:00 - 18:00 / 점심시간 13:00 - 14:00)<br>
+                E. genie85@gallgall.com
+            </div>
+        </div>
+
+        <div class="our">
+            <div class="foo_text">
+                <br>
+                <br>
+                <br>
+                2023 by GALLERIAGALLARY ALL RIGHTS RESERVED.<br>
+                DESIGNED by HYEON/YONG/JUNG/JIIN
+            </div>
+        </div>
+    </div>
+
+
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "ko", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
 </body>
+
+
 
 </html>

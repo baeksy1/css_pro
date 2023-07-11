@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/exinfo.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <div><img src="img/title.png" class="title"></div>
+    <div class="buttons"><button class="dark">close</button></div>
+    <script>
+        var btn = document.querySelector(".dark");
+        btn.onclick = function() {
+            window.close();
+        }
+    </script>
+
+
+    <div class="container">
+        <div class="con_left">
+            
+            <h3 style="text-align: left; padding-left: 30px;">김윤신:</h3>
+            <h3 style="text-align: left; padding-left: 30px;">더하고 나누며, 하나</h3>
+           
+
+            <div class="con">
+                <p class="txt1">전시 장소: 서울시립미술관</p>
+                <p class="txt2">전시 기간: 23.02.28(금) ~ 23.05.07(일)</p>
+                <p class="txt3">관람 시간: 10:00 ~ 19:00(매표소 마감 6시 / 매월 첫 번째 월요일 휴관)</p>
+            </div>
+
+            <!-- <div id="map" style="width:550px;height:350px;"></div>
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec2772c2357a378d12c19e18240c29e9"></script>
+
+            <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.57784219128512, 126.972898185722), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                var imageSrc = 'img/marker.png', // 마커이미지의 주소입니다    
+                    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+                    imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+                // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                    markerPosition = new kakao.maps.LatLng(37.57784219128512, 126.972898185722); // 마커가 표시될 위치입니다
+
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition,
+                    image: markerImage // 마커이미지 설정 
+                });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
+
+            </script> -->
+       
+            <iframe style="padding-top: 50px;" width="560" height="300" src="https://www.youtube.com/embed/CaSx_RkK6yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       
+        </div>
+        <div class="con_right">
+
+            <img src="img/poster.jpeg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
